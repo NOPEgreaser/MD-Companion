@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MiniDisc Utility App</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
+
+    body {
+      background-color: #fff;
+      color: #000;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 2em;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #1e1e1e;
+        color: #fff;
+      }
+      .menu button {
+        background-color: #333;
+        color: #fff;
+      }
+      .menu button:hover {
+        background-color: #444;
+      }
+      .checkbox label, .footer {
+        color: #ccc;
+      }
+    }
+
+    @media (prefers-color-scheme: light) {
+      body {
+        background-color: #fff;
+        color: #000;
+      }
+      .menu button {
+        background-color: #eee;
+        color: #000;
+      }
+      .menu button:hover {
+        background-color: #ddd;
+      }
+      .checkbox label, .footer {
+        color: #555;
+      }
+    }
+
+    h1 {
+      color: #61dafb;
+    }
+
+    .menu {
+      margin-top: 2em;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2em;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .menu button {
+      padding: 1em;
+      border: none;
+      border-radius: 10px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .footer {
+      margin-top: 4em;
+      font-size: 0.9em;
+    }
+
+    .checkbox {
+      margin-top: 2em;
+    }
+
+    .download {
+      margin-top: 3em;
+    }
+
+    .download a {
+      color: #61dafb;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>MiniDisc Utility App</h1>
+  <p>Burn, Rip, and Play MiniDiscs on Windows</p>
+
+  <div class="menu">
+    <button onclick="alert('Launching Burn Mode...')">🔥 Burn MiniDisc</button>
+    <button onclick="alert('Launching Rip Mode...')">📥 Rip MiniDisc</button>
+    <button onclick="alert('Launching Player...')">🎧 MiniDisc Player</button>
+  </div>
+
+  <div class="checkbox">
+    <input type="checkbox" id="autoEject" checked />
+    <label for="autoEject">Auto-eject disc after burn/rip</label>
+  </div>
+
+  <div class="download">
+    <p><a href="https://github.com/yourusername/minidisc-app/releases/latest" target="_blank">⬇ Download Windows EXE</a></p>
+  </div>
+
+  <div class="footer">
+    Created by [@NOPEgreaser on GitHub] • Powered by FFmpeg + NetMD
+  </div>
+</body>
+</html>
